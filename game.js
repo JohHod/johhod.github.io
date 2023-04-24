@@ -109,8 +109,10 @@ initImages = async () => {
 }
 
 initSounds = async () => {
-  sounds.left = await loadSound("http://stephane.brechet.free.fr/Sons/Wave/BONGO_LO.WAV");
-  sounds.right = await loadSound("http://tipiwiki.free.fr/snd/Percussions3.wav");
+  // sounds.left = await loadSound("http://stephane.brechet.free.fr/Sons/Wave/BONGO_LO.WAV");
+  // sounds.right = await loadSound("http://tipiwiki.free.fr/snd/Percussions3.wav");
+  sounds.left = await loadSound("sounds/left.wav");
+  sounds.right = await loadSound("sounds/right.wav");
 }
 
 init = async () => {
