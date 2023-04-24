@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Basic Site</title>
+  
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+  <h1>Welcome to My Basic Site</h1>
+  
+  <button class="green-button">Button 1</button>
+  <br>
+  <button class="red-button">Button 2</button>
+  <br>
+  
+  
+  <input type="text" placeholder="Input 1">
+  <input type="text" placeholder="Input 2">
+  
+  
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed erat eu ex consectetur blandit a at sapien.</p>
+  <p>Proin auctor bibendum vestibulum. Nam ullamcorper ex ac fringilla. Curabitur euismod, nisi eget consectetur bibendum, ipsum mauris mollis mauris, in facilisis sapien massa et justo.</p>
+  
+
+  
+  <a href="/game.html">play</a>
+
+  <h2>Trending gifs</h2>
+  <ul id="gifbox">gifs go here</div>
+
+  
+  <script>
+    
+    
+    const URL = `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=10&rating=g`;
+
+    window.onload = async () => {
+      const response = await fetch(URL);
+      const obj = await response.json();
+      console.log(obj);
+      obj.data.forEach((gif) => {
+        console.log(gif);
+
+        const gifItem = document.createElement("li");
+        gifItem.innerText = gif.title;
+
+        const imgTag = document.createElement("img");
+        console.log(gif.images.original.url)
+        imgTag.src = gif.images.original.url;
+        gifItem.appendChild(imgTag);
+
+        document.getElementById("gifbox").append(gifItem);
+      });
+
+    };
+  </script>
+</body>
+</html>

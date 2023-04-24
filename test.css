@@ -1,0 +1,50 @@
+input {
+  background-color: rgb(79, 235, 31);
+}
+
+.green-button, .red-button, input {
+  border-radius: 10px;
+}
+
+.bg-green-100 {
+  background-color: green;
+}
+
+.red-button {
+  background-color: red;
+  padding: 10px;
+}
+
+.green-button {
+  background-color: rgb(0, 255, 34);
+  padding: 10px;
+}
+
+#gifbox {
+  background-color: peachpuff;
+}
+
+canvas {
+  background-color: white;
+}
+
+html {
+  height: 100%;
+  background-color: rgb(182, 182, 182);
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#canvasContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=test.css.map */

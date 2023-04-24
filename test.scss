@@ -1,0 +1,36 @@
+@import 'form_elements';
+
+.red-button {
+    @include button(red);
+}
+
+.green-button {
+    @include button(rgb(0, 255, 34));
+}
+
+#gifbox {
+    background-color: peachpuff;
+}
+
+canvas {
+    background-color: white;
+}
+
+html {
+    height: 100%;
+    background-color: rgb(182, 182, 182);
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+#canvasContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}

@@ -1,0 +1,18 @@
+input {
+    background-color:rgb(79, 235, 31);
+    @extend %rounded;
+}
+
+@mixin button($color) {
+    background-color: $color;
+    padding: 10px;
+    @extend %rounded;
+}
+
+%rounded {
+   border-radius: 10px; 
+}
+
+.bg-green-100 {
+    background-color: green;
+}
