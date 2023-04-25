@@ -194,10 +194,10 @@ const playSound = (state) => {
 
 const handleKeydown = (e) => {
   Object.keys(keyBools).forEach(v => keyBools[v] = false);
-  if(e.key === "ArrowLeft") {
+  if(e.key === "ArrowLeft" || e.key === "ArrowDown") {
     keyBools.left = true;
   }
-  else if(e.key === "ArrowRight") {
+  else if(e.key === "ArrowRight" || e.key === "ArrowUp") {
     keyBools.right = true;
   }
   else if(e.key === " ") {
@@ -206,10 +206,10 @@ const handleKeydown = (e) => {
 };
 
 const handleKeyup = (e) => {
-  if(e.key === "ArrowLeft") {
+  if(e.key === "ArrowLeft" || e.key === "ArrowDown") {
     keyBools.left = false;
   }
-  else if(e.key === "ArrowRight") {
+  else if(e.key === "ArrowRight" || e.key === "ArrowUp") {
     keyBools.right = false;
   }
   else if(e.key === " ") {
